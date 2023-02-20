@@ -7,6 +7,8 @@ import { useLoginMutation } from "graphql/generated/graphql";
 
 jest.mock("graphql/generated/graphql");
 
+const mockedUseLoginMutation = useLoginMutation as jest.Mock;
+
 const useAuthProvider = () => {
     return useContext(AuthContext);
 };
@@ -17,7 +19,7 @@ const MOCK_TOKEN = "testAccessToken";
 
 describe("AuthProvider", () => {
     test("Should set isAuth to true and add cookie after login", async () => {
-        useLoginMutation.mockImplementation(
+        mockedUseLoginMutation.mockImplementation(
             jest.fn(() => {
                 const [data, setData] = useState<{
                     login: { accessToken: string };
@@ -56,7 +58,7 @@ describe("AuthProvider", () => {
     });
 
     test("Should set isAuth to false and remove cookie after logout", async () => {
-        useLoginMutation.mockReturnValue([
+        mockedUseLoginMutation.mockReturnValue([
             jest.fn(),
             {
                 data: { login: { accessToken: "testAccessToken" } },
