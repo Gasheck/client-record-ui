@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import { useAppointmentLazyQuery } from "../../graphql/generated/graphql";
+import { useAppointmentLazyQuery } from "graphql/generated/graphql";
 import AppLoader from "../../components/AppLoader";
 import { useParams } from "react-router-dom";
 import dateTimeFormatter from "../../utils/dateTimeFormatter";

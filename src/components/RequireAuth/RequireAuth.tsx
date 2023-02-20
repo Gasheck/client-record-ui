@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Navigate, useLocation } from "react-router-dom";
-import useAuth from "../../hooks/useAuth";
+import AuthContext from "providers/Auth/AuthContext";
 
 const RequireAuth = ({ children }: { children: JSX.Element }) => {
-    const { isAuth } = useAuth();
+    const { isAuth } = useContext(AuthContext);
     const location = useLocation();
 
     if (!isAuth) {

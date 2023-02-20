@@ -3,7 +3,7 @@ import AppointmentCard from "../../components/appointment/AppointmentCard";
 import AppointmentCardLoader from "../../components/appointment/AppointmentCard/AppointmentCardLoader";
 import { Alert, Grid } from "@mui/material";
 import AppointmentGridItem from "./components/AppointmentGridItem";
-import { useAppointmentsQuery } from "../../graphql/generated/graphql";
+import { useAppointmentsQuery } from "graphql/generated/graphql";
 import appointmentToViewData from "../../utils/appointmentToViewData";
 
 const Appointments = () => {

@@ -1,10 +1,10 @@
-import React, { FC, useCallback } from "react";
+import React, { FC, useCallback, useContext } from "react";
 import { IconButton, Menu, MenuItem } from "@mui/material";
-import useAuth from "../../../../hooks/useAuth";
 import { AccountCircle } from "@mui/icons-material";
+import AuthContext from "providers/Auth/AuthContext";
 
 const AccountButton: FC = () => {
-    const { logout } = useAuth();
+    const { logout } = useContext(AuthContext);
     const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
 
     const handleClose = useCallback(() => {

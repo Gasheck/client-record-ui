@@ -1,10 +1,10 @@
-import { LoginMutationVariables } from "../../../graphql/generated/graphql";
-import { useCallback, useEffect, useMemo } from "react";
+import { LoginMutationVariables } from "graphql/generated/graphql";
+import { useCallback, useContext, useEffect, useMemo } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import useAuth from "../../../hooks/useAuth";
+import AuthContext from "providers/Auth/AuthContext";
 
 const useLoginPage = () => {
-    const { isAuth, login, loading, error } = useAuth();
+    const { isAuth, login, loading, error } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment

@@ -5,7 +5,7 @@ import {
     AppointmentsQuery,
     ClientInput,
     useCreateClientMutation,
-} from "../../../graphql/generated/graphql";
+} from "graphql/generated/graphql";
 
 const useClientCreateFormParams = () => {
     const { updateQuery } = useQuery(AppointmentsDocument);

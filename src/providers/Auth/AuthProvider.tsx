@@ -1,7 +1,7 @@
 import React, { FC, useCallback, useEffect, useState } from "react";
 import AuthContext from "./AuthContext";
 import Cookies from "js-cookie";
-import { useLoginMutation } from "../../graphql/generated/graphql";
+import { useLoginMutation } from "graphql/generated/graphql";
 
 const AuthProvider: FC = ({ children }) => {
     const [authToken, setAuthToken] = useState(Cookies.get("token") || "");

@@ -2,7 +2,7 @@ import {
     AppointmentInput,
     useAppointmentLazyQuery,
     useUpdateAppointmentMutation,
-} from "../../../graphql/generated/graphql";
+} from "graphql/generated/graphql";
 import { useCallback, useEffect, useMemo } from "react";
 import { useParams } from "react-router-dom";
 

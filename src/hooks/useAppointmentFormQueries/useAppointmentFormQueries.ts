@@ -3,7 +3,7 @@ import {
     useClientsQuery,
     useMastersQuery,
     useProcedureByMasterQuery,
-} from "../../graphql/generated/graphql";
+} from "graphql/generated/graphql";
 import { useFormikContext } from "formik";
 
 function useAppointmentFormQueries() {

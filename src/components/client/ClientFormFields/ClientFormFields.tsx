@@ -12,7 +12,7 @@ import {
     Typography,
 } from "@mui/material";
 import FormikTextField from "../../Formik/FormikTextField";
-import { ClientInput } from "../../../graphql/generated/graphql";
+import { ClientInput } from "graphql/generated/graphql";
 import AddIcCallIcon from "@mui/icons-material/AddIcCall";
 import DeleteIcon from "@mui/icons-material/Delete";
 

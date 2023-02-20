@@ -3,9 +3,9 @@ import AuthProvider from "./AuthProvider";
 import { ReactNode, useContext, useState } from "react";
 import AuthContext from "./AuthContext";
 import Cookies from "js-cookie";
-import { useLoginMutation } from "../../graphql/generated/graphql";
+import { useLoginMutation } from "graphql/generated/graphql";
 
-jest.mock("../../graphql/generated/graphql");
+jest.mock("graphql/generated/graphql");
 
 const useAuthProvider = () => {
     return useContext(AuthContext);

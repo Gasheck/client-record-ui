@@ -3,12 +3,12 @@ import { AppBar, Box, IconButton, Toolbar } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import AccountButton from "./components/AccountButton";
 import AddNewButton from "./components/AddNewButton";
-import useAuth from "../../hooks/useAuth";
-import SidebarContext from "../../providers/Sidebar/SidebarContext";
+import SidebarContext from "providers/Sidebar/SidebarContext";
+import AuthContext from "providers/Auth/AuthContext";
 
 const Header = () => {
     const { open: openSidebar } = useContext(SidebarContext);
-    const { isAuth } = useAuth();
+    const { isAuth } = useContext(AuthContext);
 
     return (
         <AppBar position="fixed">

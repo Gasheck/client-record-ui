@@ -1,4 +1,4 @@
-import { Appointment } from "../graphql/generated/graphql";
+import { Appointment } from "graphql/generated/graphql";
 import dateTimeFormatter from "./dateTimeFormatter";
 
 const appointmentToViewData = (appointment: Appointment) => {

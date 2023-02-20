@@ -1,4 +1,4 @@
-import { useChannelsQuery } from "../../graphql/generated/graphql";
+import { useChannelsQuery } from "graphql/generated/graphql";
 
 const useClientFormQueries = () => {
     const {

@@ -4,7 +4,7 @@ import {
     AppointmentsDocument,
     AppointmentsQuery,
     useCreateAppointmentMutation,
-} from "../../../graphql/generated/graphql";
+} from "graphql/generated/graphql";
 import { useCallback, useEffect, useMemo } from "react";
 
 const useAppointmentCreateFormParams = () => {
