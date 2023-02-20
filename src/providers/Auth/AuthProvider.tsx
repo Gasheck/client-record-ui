@@ -15,7 +15,11 @@ const AuthProvider: FC = ({ children }) => {
     }, [data, setAuthToken]);
 
     useEffect(() => {
-        Cookies.set("token", authToken, { expires: 1 });
+        if (authToken) {
+            Cookies.set("token", authToken, { expires: 1 });
+        } else {
+            Cookies.remove("token");
+        }
     }, [authToken]);
 
     useEffect(() => {
@@ -41,7 +45,6 @@ const AuthProvider: FC = ({ children }) => {
     return (
         <AuthContext.Provider
             value={{
-                authToken,
                 isAuth,
                 login,
                 logout,

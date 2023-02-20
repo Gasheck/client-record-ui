@@ -17,6 +17,7 @@ const useLoginPage = () => {
             navigate(from, { replace: true });
         }
     }, [isAuth, navigate, from]);
+
     const initialValues = useMemo(
         () => ({
             email: "",
